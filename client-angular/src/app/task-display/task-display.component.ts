@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { TaskService } from "../task.service";
 import { Task } from "../models/task";
+import { __param } from "tslib";
 
 @Component({
   selector: "app-task-display",
@@ -23,7 +24,17 @@ export class TaskDisplayComponent implements OnInit {
     });
   }
 
+  deleteTask(id: number) :void {
+    this.taskService.deleteTask(id);
+  }
+
+  updateProject(task: Task) {
+    this.taskService.updateProject(task);
+  }
+
   ngOnInit() {
     this.getTasks();
+    // this.route.params.subscribe(params => {})
+    // this.taskService.getTasks(+param.id)
   }
 }

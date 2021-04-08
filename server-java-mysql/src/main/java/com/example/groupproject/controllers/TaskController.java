@@ -44,8 +44,20 @@ public class TaskController {
   public Task updateProject(@PathVariable Long id, @RequestBody Task task) {
     Task foundTask = taskRepository.findById(id).orElse(null);
     if (foundTask != null) {
-    	foundTask.setName(task.getName());
-    	foundTask.setComplete(task.getComplete());
+      //setComplete
+      Boolean currentlyComplete = task.getComplete();
+      if (currentlyComplete == true) {
+        foundTask.setComplete(false);
+      } else if (currentlyComplete == false) {
+        foundTask.setComplete(true);
+      } else {
+        foundTask.setComplete(false);
+      }
+    	//setName
+      foundTask.setName(task.getName());
+    	//	foundTask.setComplete(task.getComplete());  
+      
+      //save data to repository
       taskRepository.save(foundTask);
       return foundTask;
     }

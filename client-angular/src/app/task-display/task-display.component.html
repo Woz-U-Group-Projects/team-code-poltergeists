@@ -4,6 +4,7 @@
   <li *ngFor="let task of tasks">
      {{ task.name }} :
     {{ task.complete ? "complete" : "not complete" }}
-    <button type="button" class="btn btn-success">Complete</button><button type="button" class="btn btn-danger">Delete</button>
+    <button (click) = "deleteTask(task.id)" type="button" class="btn btn-danger">Delete</button>
+    <button (click) = "updateProject(task.id)" class="btn btn-success">Complete</button>
   </li>
 </ul>
