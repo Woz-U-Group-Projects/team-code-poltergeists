@@ -1,0 +1,128 @@
+<h2> DsPump List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> 1 </th>
+            <th> 2 </th>
+            <th> 3 </th>
+            <th> 4 </th>
+            <th> 5 </th>
+            <th> 6 </th>
+            <th> 7 </th>
+            <th> 8 </th>
+            <th> 9 </th>
+            <th> 10 </th>
+            <th> 11 </th>
+            <th> 12 </th>
+            <th> 13 </th>
+            <th> 14 </th>
+            <th> 15 </th>
+            <th> 16 </th>
+            <th> 16 </th>
+            <th> 18 </th>
+            <th> 19 </th>
+            <th> 20 </th>
+            <th> 21 </th>
+            <th> 22 </th>
+            <th> 23 </th>
+            <th> 24 </th>
+            <th> 25 </th>
+            <th> 26 </th>
+            <th> 27 </th>
+            <th> 28 </th>
+            <th> 29 </th>
+            <th> 30 </th>
+            <th> 31 </th>
+            <th> 32 </th>
+            <th> 33 </th>
+            <th> 34 </th>
+            <th> 35 </th>
+            <th> 36 </th>
+            <th> 37 </th>
+            <th> 38 </th>
+            <th> 39 </th>
+            <th> 40 </th>
+            <th> 41 </th>
+            <th> 42 </th>
+            <th> 43 </th>
+            <th> 44 </th>
+            <th> 45 </th>
+            <th> 46 </th>
+            <th> 47 </th>
+            <th> 48 </th>
+            <th> 49 </th>
+            <th> 50 </th>
+            <th> 51 </th>
+            <th> 52 </th>
+            <th> 53 </th>
+            <th> 54 </th>
+            <th> 55 </th>
+            <th> 56 </th>
+            
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let dsPump of dsPumps" >
+            <td> {{ dsPump.id }} </td>
+            <td> {{ dsPump.shiftDate }} </td>
+            <td> {{ dsPump.shift }} </td>
+            <td> {{ dsPump.time }} </td>
+            <td> {{ dsPump.operator }} </td>
+            <td> {{ dsPump.roSuction }} </td>
+            <td> {{ dsPump.headerPress }} </td>
+            <td> {{ dsPump.p07aFlow }} </td>
+            <td> {{ dsPump.p07bFlow }} </td> 
+            <td> {{ dsPump.p07cFlow }} </td> 
+            <td> {{ dsPump.p07dFlow }} </td> 
+            <td> {{ dsPump.p07eFlow }} </td> 
+            <td> {{ dsPump.p07aPress }} </td> 
+            <td> {{ dsPump.p07bPress }} </td>
+            <td> {{ dsPump.p07cPress }} </td> 
+            <td> {{ dsPump.p07dPress }} </td> 
+            <td> {{ dsPump.p07ePress }} </td> 
+            <td> {{ dsPump.acidPumpDischargePress }} </td> 
+            <td> {{ dsPump.hypoPumpDischargePress }} </td> 
+            <td> {{ dsPump.wwBoosterSuctionPress }} </td>
+            <td> {{ dsPump.wwBoosterDischPress }} </td> 
+            <td> {{ dsPump.p03aPress }} </td> 
+            <td> {{ dsPump.p03bPress }} </td> 
+            <td> {{ dsPump.p03cPress }} </td> 
+            <td> {{ dsPump.dsHeaderPress }} </td> 
+            <td> {{ dsPump.dsDischPress }} </td>
+            <td> {{ dsPump.p09aPress }} </td> 
+            <td> {{ dsPump.p09bPress }} </td> 
+            <td> {{ dsPump.p09cPress }} </td>
+            <td> {{ dsPump.t14aLevel }} </td> 
+            <td> {{ dsPump.t14bLevel }} </td> 
+            <td> {{ dsPump.f15aPress }} </td>
+            <td> {{ dsPump.f15bPress }} </td> 
+            <td> {{ dsPump.f15cPress }} </td> 
+            <td> {{ dsPump.f15dPress }} </td>
+            <td> {{ dsPump.cartridgeFilter }} </td> 
+            <td> {{ dsPump.cfDiffPress }} </td> 
+            <td> {{ dsPump.t04Level }} </td>
+            <td> {{ dsPump.hypoDayTankLevel }} </td>
+            <td> {{ dsPump.roDischResidual }} </td>
+            <td> {{ dsPump.filterDischResidual }} </td>
+            <td> {{ dsPump.dsResidual  }} </td>
+            <td> {{ dsPump.f02aDp }} </td>
+            <td> {{ dsPump.f02bDp }} </td>
+            <td> {{ dsPump.f02cDp }} </td>
+            <td> {{ dsPump.t02aLevel }} </td>
+            <td> {{ dsPump.t02bLevel }} </td>
+            <td> {{ dsPump.as9838 }} </td>
+            <td> {{ dsPump.causticLevel }} </td>
+            <td> {{ dsPump.comments }} </td>
+            <td> {{ dsPump.f02a }} </td>
+            <td> {{ dsPump.f02b }} </td>
+            <td> {{ dsPump.f02c }} </td>
+            <td>
+                <button (click) = "updateDsPump(dsPump.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteDsPump(dsPump.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "dsPumpDetails(dsPump.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
