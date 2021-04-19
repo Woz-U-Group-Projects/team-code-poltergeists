@@ -1,0 +1,25 @@
+<h2> DsPump List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Shift Date </th>
+            <th> Shift </th>
+            <th> Time </th>
+            <th> Operator </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let dsPump of dsPumps" >
+            <td> {{ dsPump.shiftDate }} </td>
+            <td> {{ dsPump.shift }} </td>
+            <td> {{ dsPump.time }} </td>
+            <td> {{ dsPump.operator }} </td>
+            
+            <td>
+                <button (click) = "updateDsPump(dsPump.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteDsPump(dsPump.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "dsPumpDetails(dsPump.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

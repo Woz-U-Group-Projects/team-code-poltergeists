@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        
+        {
+            "name": "Launch Chrome against localhost",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:4200",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}",
+            "sourceMapPathOverrides": {
+                "webpack:///./*": "${workspaceRoot}/*"
+            }    
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootBackendApplication<springboot-backend>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "net.javaguides.springboot.SpringbootBackendApplication",
+            "projectName": "springboot-backend",
+            "args": ""
+        }
+    ]
+}
