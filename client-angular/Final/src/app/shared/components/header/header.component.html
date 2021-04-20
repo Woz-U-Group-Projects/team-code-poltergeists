@@ -1,14 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="navbar-wrapper">
+<nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"><i class="fas fa-user-clock"></i>Data Logger</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Home </a>
+                <a class="nav-link" [routerLink]="['home']"routerLinkActive="active" href="/">Home </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['register']" routerLinkActive="active" href="#">Register</a>
@@ -16,17 +16,22 @@
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['login']" routerLinkActive="active" href="#">Login</a>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['reset-password']" routerLinkActive="active" href="#">Change
                     Password</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['update-dsPump']" routerLinkActive="active" href="#">Update Log</a>
+                <a class="nav-link" [routerLink]="['create-dsPump']" routerLinkActive="active" href="#">Create Log</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['dsPump-details']" routerLinkActive="active" href="#">Pump Details</a>
+                <a class="nav-link" [routerLink]="['dsPump-list']" routerLinkActive="active" href="#">Pump List</a>
             </li>
         </ul>
     </div>
+
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
 </nav>
+</div>

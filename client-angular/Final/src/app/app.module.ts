@@ -38,7 +38,8 @@ import { DsPumpDetailsComponent } from './auth/components/dsPump-details/dsPump-
     AuthModule,
     SharedModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
 
   ],
   providers: [],

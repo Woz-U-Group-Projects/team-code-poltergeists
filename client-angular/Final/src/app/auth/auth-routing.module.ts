@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'update-dsPump', component: UpdateDsPumpComponent },
   { path: 'dsPump-details', component: DsPumpDetailsComponent},
   { path: 'dsPumps', component: DsPumpListComponent},
+  {path: 'dsPump-list', component: DsPumpListComponent},
   { path: 'create-dsPump', component: CreateDsPumpComponent},
   { path: '', redirectTo: 'dsPumps', pathMatch: 'full'}
   
