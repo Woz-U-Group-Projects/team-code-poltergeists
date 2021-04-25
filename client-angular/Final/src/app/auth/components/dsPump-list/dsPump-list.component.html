@@ -14,11 +14,10 @@
             <td> {{ dsPump.shift }} </td>
             <td> {{ dsPump.time }} </td>
             <td> {{ dsPump.operator }} </td>
-            
             <td>
-                <button (click) = "updateDsPump(dsPump.id)" class = "btn btn-info"> Update</button>
-                <button (click) = "deleteDsPump(dsPump.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                <button (click) = "dsPumpDetails(dsPump.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+                <button (click) = "updateDsPump(dsPump.id)" class = "btn btn-info btn-sm"> Update</button>
+                <button (click) = "deleteDsPump(dsPump.id)" class = "btn btn-danger btn-sm" style="margin-left: 10px"> Delete</button>
+                <button (click) = "dsPumpDetails(dsPump.id)" class = "btn btn-warning btn-sm" style="margin-left: 10px"> View</button>
             </td>
         </tr>
     </tbody>
